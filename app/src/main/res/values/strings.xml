@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">story-of-cats-kotlin</string>
+    <string name="my_novel">Моя визуальная новелла</string>
+    <string name="start_button">Начать</string>
+    <string name="confirm_button">Подтвердить</string>
+    <string name="Print_your_name">Введите свое имя...</string>
+    <string name="Hello">Привет! Меня зовут Кирюша. А тебя?</string>
+
+
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_controller">ControllerActivity</string>
 </resources>
