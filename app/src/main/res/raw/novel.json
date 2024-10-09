@@ -78,7 +78,7 @@
     {
       "id": 4,
       "text": "Может, пойдем домой?..",
-      "backGroundScene": "walking_cats_page",
+      "backGroundScene": "cats_running_page",
       "buttons": [
         {
           "place": null,
