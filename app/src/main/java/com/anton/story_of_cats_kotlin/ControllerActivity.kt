@@ -32,9 +32,12 @@ class ControllerActivity: AppCompatActivity() {
 
         binding.templateFormTextView.text = text
 
-        if(userChoice < 4) {
+        if (userChoice < 4) {
             binding.imageView3.visibility = View.VISIBLE
         }
+//        if (userChoice == 14) {
+//            binding.templateFormFirstSelectChoiceButton.background = R.color.dark_blue
+//        }
 
         ImageResources.map[page.backGroundScene]?.let {
             binding.templateFormImageView.setImageResource(
@@ -68,6 +71,7 @@ class ControllerActivity: AppCompatActivity() {
                         else -> Intent(this, ControllerActivity::class.java).apply {
                             putExtra(UserConstants.CHOICE, buttonModel.idOfNextScene)
                         }
+
                     }
                     startActivity(intent)
                 }

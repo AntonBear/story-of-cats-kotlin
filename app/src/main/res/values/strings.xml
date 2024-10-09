@@ -5,8 +5,9 @@
     <string name="confirm_button">Подтвердить</string>
     <string name="Print_your_name">Введите свое имя...</string>
     <string name="Hello">Привет! Меня зовут Кирюша. А тебя?</string>
-
-
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_activity_controller">ControllerActivity</string>
+    <string name="templateFormThirdSelectChoiceButton_1">templateFormThirdSelectChoiceButton  # 1</string>
+    <string name="templateFormThirdSelectChoiceButton_2">templateFormThirdSelectChoiceButton  # 2</string>
+    <string name="templateFormThirdSelectChoiceButton_3">templateFormThirdSelectChoiceButton  # 3</string>
 </resources>
