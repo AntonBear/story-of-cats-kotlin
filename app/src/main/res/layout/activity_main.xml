@@ -37,17 +37,16 @@
         style="@style/my_novel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="420dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="@string/my_novel"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/mainScreenBackground"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintVertical_bias="0.469" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,7 @@ class ControllerActivity: AppCompatActivity() {
             val params = binding.templateFormTextView.layoutParams as ViewGroup.MarginLayoutParams
             val bottomMarginInPx = TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
-                130f, 
+                230f,
                 resources.displayMetrics
             ).toInt()
             params.setMargins(0, 0, 0, bottomMarginInPx)
@@ -63,6 +63,11 @@ class ControllerActivity: AppCompatActivity() {
                 0,
                 bottomPaddingInPx
             )
+
+            val paramsForbutton = binding.templateFormFirstSelectChoiceButton.layoutParams as ViewGroup.MarginLayoutParams
+            paramsForbutton.setMargins(0,0,0, 550)
+            binding.templateFormFirstSelectChoiceButton.layoutParams = paramsForbutton
+
         }
 
         ImageResources.map[page.backGroundScene]?.let {
