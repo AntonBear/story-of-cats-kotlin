@@ -69,13 +69,6 @@ class ControllerActivity: AppCompatActivity() {
                             putExtra(UserConstants.CHOICE, buttonModel.idOfNextScene)
                         }
                     }
-
-//                    var intent = Intent(this, ControllerActivity::class.java)
-//                    intent.putExtra(UserConstants.CHOICE, buttonModel.idOfNextScene)
-//                    if (buttonModel.idOfNextScene=1) {
-//                        intent = Intent(this, MainActivity::class.java)
-//                    }
-
                     startActivity(intent)
                 }
             }
