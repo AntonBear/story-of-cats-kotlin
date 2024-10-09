@@ -10,4 +10,5 @@
     <string name="templateFormThirdSelectChoiceButton_1">templateFormThirdSelectChoiceButton  # 1</string>
     <string name="templateFormThirdSelectChoiceButton_2">templateFormThirdSelectChoiceButton  # 2</string>
     <string name="templateFormThirdSelectChoiceButton_3">templateFormThirdSelectChoiceButton  # 3</string>
+    <string name="templateFormTextView">templateFormTextView</string>
 </resources>
