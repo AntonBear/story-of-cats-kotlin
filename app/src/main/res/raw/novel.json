@@ -209,7 +209,7 @@
           "place": 1,
           "text": "Да, уже поздно...",
           "nameOfNextScene": "end_page",
-          "idOfNextScene": 14
+          "idOfNextScene": 1
         },
         {
           "place": null,
@@ -234,7 +234,7 @@
           "place": 1,
           "text": "Да, уже поздно...",
           "nameOfNextScene": "end_page",
-          "idOfNextScene": 14
+          "idOfNextScene": 1
         },
         {
           "place": null,
@@ -282,7 +282,7 @@
           "place": 1,
           "text": "Да, уже поздно...",
           "nameOfNextScene": "end_page",
-          "idOfNextScene": 14
+          "idOfNextScene": 1
         },
         {
           "place": null,
@@ -307,7 +307,7 @@
           "place": 1,
           "text": "Да, уже поздно...",
           "nameOfNextScene": "end_page",
-          "idOfNextScene": 14
+          "idOfNextScene": 1
         },
         {
           "place": null,
