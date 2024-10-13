@@ -6,21 +6,18 @@
       "backGroundScene": "home_page",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
+
           "idOfNextScene": null
         },
         {
-          "place": null,
+
           "text": null,
-          "nameOfNextScene": null,
+
           "idOfNextScene": null
         }
       ]
@@ -31,21 +28,15 @@
       "backGroundScene": "home_page",
       "buttons": [
         {
-          "place": 1,
           "text": "Подтвердить",
-          "nameOfNextScene": "home_page",
           "idOfNextScene": 3
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         }
       ]
@@ -56,21 +47,15 @@
       "backGroundScene": "home_page",
       "buttons": [
         {
-          "place": 1,
           "text": "Пойдем на пробежку",
-          "nameOfNextScene": "walking_cats_page",
           "idOfNextScene": 4
         },
         {
-          "place": 2,
           "text": "Пойдем в поход",
-          "nameOfNextScene": "camping_page",
           "idOfNextScene": 5
         },
         {
-          "place": 3,
           "text": "Погуляем по полю",
-          "nameOfNextScene": "walking_cats_page",
           "idOfNextScene": 6
         }
       ]
@@ -81,21 +66,15 @@
       "backGroundScene": "cats_running_page",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": 2,
           "text": "Да, и посмотрим фильм",
-          "nameOfNextScene": "watching_film_cats_page",
           "idOfNextScene": 7
         },
         {
-          "place": 3,
           "text": "Да, и отпразднуем хэллоуин",
-          "nameOfNextScene": "halloween_page",
           "idOfNextScene": 8
         }
       ]
@@ -106,21 +85,15 @@
       "backGroundScene": "camping_page",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": 2,
           "text": "Пойдем домой и посмотрим фильм",
-          "nameOfNextScene": "watching_film_cats_page",
           "idOfNextScene": 7
         },
         {
-          "place": 3,
           "text": "Пойдем домой и отпразднуем Хэллоуин",
-          "nameOfNextScene": "halloween_page",
           "idOfNextScene": 8
         }
       ]
@@ -131,21 +104,15 @@
       "backGroundScene": "walking_cats_page",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": 2,
           "text": "Может, посмотрим фильм?",
-          "nameOfNextScene": "halloween_page",
           "idOfNextScene": 7
         },
         {
-          "place": 3,
           "text": "Да, отпразднуем Хэллоуин",
-          "nameOfNextScene": "halloween_page",
           "idOfNextScene": 8
         }
       ]
@@ -156,21 +123,15 @@
       "backGroundScene": "watching_film_cats_page",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": 2,
           "text": "Мне понравился!",
-          "nameOfNextScene": "halloween_page",
           "idOfNextScene": 9
         },
         {
-          "place": 3,
           "text": "Не очень...",
-          "nameOfNextScene": "halloween_page",
           "idOfNextScene": 10
         }
       ]
@@ -181,21 +142,15 @@
       "backGroundScene": "halloween_page",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": 2,
           "text": "Да! Может, посмотрим фильм?",
-          "nameOfNextScene": "watching_film_cats_page",
           "idOfNextScene": 7
         },
         {
-          "place": 3,
           "text": "Да! Давай сделаем костюмы!",
-          "nameOfNextScene": "halloween_page_scene_2",
           "idOfNextScene": 11
         }
       ]
@@ -206,21 +161,15 @@
       "backGroundScene": "watching_film_cats_page",
       "buttons": [
         {
-          "place": 1,
           "text": "Да, уже поздно...",
-          "nameOfNextScene": "end_page",
           "idOfNextScene": 1
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         }
       ]
@@ -231,21 +180,15 @@
       "backGroundScene": "watching_film_cats_page",
       "buttons": [
         {
-          "place": 1,
           "text": "Да, уже поздно...",
-          "nameOfNextScene": "end_page",
           "idOfNextScene": 1
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         }]
     },
@@ -255,21 +198,15 @@
       "backGroundScene": "halloween_page_scene_2",
       "buttons": [
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": 2,
           "text": "Твой тоже очень красивый!",
-          "nameOfNextScene": "halloween_page_scene_2",
           "idOfNextScene": 12
         },
         {
-          "place": 3,
           "text": "А мне, если честно, не нравится твой...",
-          "nameOfNextScene": "halloween_page_scene_2",
           "idOfNextScene": 13
         }]
     },
@@ -279,21 +216,15 @@
       "backGroundScene": "halloween_page_scene_2",
       "buttons": [
         {
-          "place": 1,
           "text": "Да, уже поздно...",
-          "nameOfNextScene": "end_page",
           "idOfNextScene": 1
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         }
       ]
@@ -304,21 +235,15 @@
       "backGroundScene": "halloween_page_scene_2",
       "buttons": [
         {
-          "place": 1,
           "text": "Да, уже поздно...",
-          "nameOfNextScene": "end_page",
           "idOfNextScene": 1
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         }
       ]
@@ -329,21 +254,15 @@
       "backGroundScene": "end_page",
       "buttons": [
         {
-          "place": 1,
           "text": "Пройти еще раз",
-          "nameOfNextScene": "home_page",
           "idOfNextScene": 1
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         },
         {
-          "place": null,
           "text": null,
-          "nameOfNextScene": null,
           "idOfNextScene": null
         }
       ]
