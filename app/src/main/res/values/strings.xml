@@ -11,4 +11,6 @@
     <string name="templateFormThirdSelectChoiceButton_2">templateFormThirdSelectChoiceButton  # 2</string>
     <string name="templateFormThirdSelectChoiceButton_3">templateFormThirdSelectChoiceButton  # 3</string>
     <string name="templateFormTextView">templateFormTextView</string>
+    <string name="here_we_go_again">Пройти еще раз</string>
+    <string name="thank_you">Спасибо, что поиграли</string>
 </resources>

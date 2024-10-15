@@ -13,8 +13,8 @@ class EndActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.textView.text = "Спасибо, что поиграли"
-        binding.startButton.text = "Пройти еще раз"
+        binding.textView.text = getString(R.string.thank_you)
+        binding.startButton.text = getString(R.string.here_we_go_again)
         binding.startButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }

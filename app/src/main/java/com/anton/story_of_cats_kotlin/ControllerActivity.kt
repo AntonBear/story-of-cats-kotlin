@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.anton.story_of_cats_kotlin.databinding.ActivityTemplateFormBinding
-import kotlinx.serialization.json.*
-import models.Novel
+import models.Page
 
 
-class ControllerActivity: AppCompatActivity() {
-
+class ControllerActivity():
+    AppCompatActivity() {
+    private val novelRepository: NovelRepository = NovelRepositoryImpl(this)
     private lateinit var binding: ActivityTemplateFormBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +18,11 @@ class ControllerActivity: AppCompatActivity() {
         binding = ActivityTemplateFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val userChoice = intent.getIntExtra(UserConstants.CHOICE,0)
-        val jsonStr = resources.openRawResource(R.raw.novel).bufferedReader().use { it.readText() }
-        val page = Json.decodeFromString<Novel>(jsonStr).pages.find { it.id == userChoice }
+
+        fun fetchPage(userChoice: Int): Page? {
+            return novelRepository.novel.pages.firstOrNull { page -> page.id == userChoice }
+        }
+        val page = fetchPage(userChoice)
 
         if (page == null) { return }
 
