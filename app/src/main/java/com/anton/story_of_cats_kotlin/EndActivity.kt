@@ -16,7 +16,9 @@ class EndActivity: AppCompatActivity() {
         binding.textView.text = getString(R.string.thank_you)
         binding.startButton.text = getString(R.string.here_we_go_again)
         binding.startButton.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
         }
     }
 

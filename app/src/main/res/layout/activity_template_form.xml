@@ -56,7 +56,47 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_percent="0.96" />
+        app:layout_constraintGuide_percent="1.0" />
+
+    <Button
+        android:id="@+id/templateFormFirstSelectChoiceButton"
+        style="@style/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/templateFormThirdSelectChoiceButton_1"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/templateFormTextView" />
+
+    <Button
+        android:id="@+id/templateFormSecondSelectChoiceButton"
+        style="@style/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/templateFormThirdSelectChoiceButton_2"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/templateFormFirstSelectChoiceButton" />
+
+    <Button
+        android:id="@+id/templateFormThirdSelectChoiceButton"
+        style="@style/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/templateFormThirdSelectChoiceButton_3"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/templateFormSecondSelectChoiceButton"
+        app:layout_constraintVertical_bias="0.047" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -64,44 +104,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/templateFormTextView">
-
-        <Button
-            android:id="@+id/templateFormFirstSelectChoiceButton"
-            style="@style/start_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/templateFormThirdSelectChoiceButton_1"
-            android:visibility="visible"
-            app:cornerRadius="0dp" />
-
-        <Button
-            android:id="@+id/templateFormSecondSelectChoiceButton"
-            style="@style/start_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/templateFormThirdSelectChoiceButton_2"
-            app:cornerRadius="0dp" />
-
-        <Button
-            android:id="@+id/templateFormThirdSelectChoiceButton"
-            style="@style/start_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
-            android:text="@string/templateFormThirdSelectChoiceButton_3"
-            app:cornerRadius="0dp" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

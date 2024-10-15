@@ -20,11 +20,5 @@ class NovelRepositoryImpl(
         val novel = Json.decodeFromString<Novel>(jsonText)
         return@lazy novel
 
-//        context
-//            .resources
-//            .openRawResource(R.raw.novel)
-//            .bufferedReader()
-//            .use { it.readText() }
-//            .let(Json::decodeFromString)
     }
 }
