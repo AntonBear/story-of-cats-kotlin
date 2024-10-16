@@ -3,12 +3,14 @@ package com.anton.story_of_cats_kotlin
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.anton.story_of_cats_kotlin.databinding.ActivityTemplateFormBinding
+import models.Button
+import models.Page
 
 
-class ControllerActivity:
-    AppCompatActivity() {
+class ControllerActivity : AppCompatActivity() {
     private lateinit var novelRepository: NovelRepository
     private lateinit var binding: ActivityTemplateFormBinding
 
@@ -16,61 +18,72 @@ class ControllerActivity:
         super.onCreate(savedInstanceState)
         binding = ActivityTemplateFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         novelRepository = NovelRepositoryImpl(this)
 
-        val userChoice = intent.getIntExtra(UserConstants.CHOICE,0)
+        val userChoice = intent.getIntExtra(UserConstants.CHOICE, 0)
+        loadPage(userChoice)
+    }
+
+    private fun loadPage(userChoice: Int) {
         val page = novelRepository.fetchPage(userChoice)
 
-        if (page == null) { return }
+        if (page == null) {
+            showError("Page is not found")
+            return
+        }
 
-        var text = page.text
+        displayPageContent(page)
+    }
+
+    private fun displayPageContent(page: Page) {
+        with(binding) {
+            templateFormTextView.text = replaceUsername(page.text)
+            imageView3.visibility = if (page.id < 4) View.VISIBLE else View.GONE
+            ImageResources.map[page.backGroundScene]?.let { resId ->
+                templateFormImageView.setImageResource(resId)
+            }
+            setupButtons(page.buttons)
+        }
+    }
+
+    private fun replaceUsername(text: String): String {
         val name = intent.getStringExtra(UserConstants.NAME)
-        name?.let {
-            text = text.replace("\$username", it)
-        }
+        return name?.let { text.replace("\$username", it) } ?: text
+    }
 
-        binding.templateFormTextView.text = text
+    private fun setupButtons(buttons: ArrayList<Button>) {
+        val buttonViews = listOf(
+            binding.templateFormFirstSelectChoiceButton,
+            binding.templateFormSecondSelectChoiceButton,
+            binding.templateFormThirdSelectChoiceButton,
+        )
 
-        if (userChoice < 4) {
-            binding.imageView3.visibility = View.VISIBLE
-        }
-
-        ImageResources.map[page.backGroundScene]?.let {
-            binding.templateFormImageView.setImageResource(
-                it
-            )
-        }
-
-        val buttonViews = with(binding) {
-            listOf(
-                templateFormFirstSelectChoiceButton,
-                templateFormSecondSelectChoiceButton,
-                templateFormThirdSelectChoiceButton,
-            )
-        }
-
-        val buttons = page.buttons
-        buttonViews.zip(buttons).forEach {
-            it.let { (buttonView, buttonModel) ->
-                if (buttonModel.text == null) {
-                    buttonView.visibility = View.INVISIBLE
-                    return@let
-                }
-
+        buttonViews.zip(buttons).forEach { (buttonView, buttonModel) ->
+            buttonModel.text?.let {
                 buttonView.visibility = View.VISIBLE
-                buttonView.text = buttonModel.text
+                buttonView.text = it
                 buttonView.setOnClickListener {
-
-                    val intent = when(buttonModel.idOfNextScene) {
-                        1 -> Intent(this, EndActivity::class.java)
-                        else -> Intent(this, ControllerActivity::class.java).apply {
-                            putExtra(UserConstants.CHOICE, buttonModel.idOfNextScene)
-                        }
-
-                    }
-                    startActivity(intent)
+                    handleButtonClick(buttonModel)
                 }
+            } ?: run {
+                buttonView.visibility = View.INVISIBLE
             }
         }
+    }
+
+    private fun handleButtonClick(buttonModel: Button) {
+        val intent = if (buttonModel.idOfNextScene == 1) {
+            Intent(this, EndActivity::class.java)
+        } else {
+            Intent(this, ControllerActivity::class.java).apply {
+                putExtra(UserConstants.CHOICE, buttonModel.idOfNextScene)
+            }
+        }
+        startActivity(intent)
+    }
+
+    private fun showError(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
