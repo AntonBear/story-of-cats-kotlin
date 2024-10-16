@@ -11,7 +11,6 @@ import models.Page
 
 
 class ControllerActivity : AppCompatActivity() {
-    private lateinit var novelRepository: NovelRepository
     private lateinit var binding: ActivityTemplateFormBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,14 +18,14 @@ class ControllerActivity : AppCompatActivity() {
         binding = ActivityTemplateFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        novelRepository = NovelRepositoryImpl(this)
+        NovelRepository.initialize(this)
 
         val userChoice = intent.getIntExtra(UserConstants.CHOICE, 0)
         loadPage(userChoice)
     }
 
     private fun loadPage(userChoice: Int) {
-        val page = novelRepository.fetchPage(userChoice)
+        val page = NovelRepository.fetchPage(userChoice)
 
         if (page == null) {
             showError("Page is not found")
