@@ -1,0 +1,271 @@
+{
+  "pages": [
+    {
+      "id": 1,
+      "text": "Моя визуальная новелла",
+      "backGroundScene": "home_page",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+
+          "idOfNextScene": null
+        },
+        {
+
+          "text": null,
+
+          "idOfNextScene": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Привет! Меня зовут Кирюша. А тебя?",
+      "backGroundScene": "home_page",
+      "buttons": [
+        {
+          "text": "Подтвердить",
+          "idOfNextScene": 3
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Привет, $username, чем займемся?",
+      "backGroundScene": "home_page",
+      "buttons": [
+        {
+          "text": "Пойдем на пробежку",
+          "idOfNextScene": 4
+        },
+        {
+          "text": "Пойдем в поход",
+          "idOfNextScene": 5
+        },
+        {
+          "text": "Погуляем по полю",
+          "idOfNextScene": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Может, пойдем домой?..",
+      "backGroundScene": "cats_running_page",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": "Да, и посмотрим фильм",
+          "idOfNextScene": 7
+        },
+        {
+          "text": "Да, и отпразднуем хэллоуин",
+          "idOfNextScene": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Как уютно... Но уже темнеет.",
+      "backGroundScene": "camping_page",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": "Пойдем домой и посмотрим фильм",
+          "idOfNextScene": 7
+        },
+        {
+          "text": "Пойдем домой и отпразднуем Хэллоуин",
+          "idOfNextScene": 8
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Тебе грустно... Пойдем домой?",
+      "backGroundScene": "walking_cats_page",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": "Может, посмотрим фильм?",
+          "idOfNextScene": 7
+        },
+        {
+          "text": "Да, отпразднуем Хэллоуин",
+          "idOfNextScene": 8
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Как тебе фильм?",
+      "backGroundScene": "watching_film_cats_page",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": "Мне понравился!",
+          "idOfNextScene": 9
+        },
+        {
+          "text": "Не очень...",
+          "idOfNextScene": 10
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Получается очень красиво!",
+      "backGroundScene": "halloween_page",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": "Да! Может, посмотрим фильм?",
+          "idOfNextScene": 7
+        },
+        {
+          "text": "Да! Давай сделаем костюмы!",
+          "idOfNextScene": 11
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Отлично! А теперь пора спать...",
+      "backGroundScene": "watching_film_cats_page",
+      "buttons": [
+        {
+          "text": "Да, уже поздно...",
+          "idOfNextScene": 1
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Жаль... Тогда пойдем спать?",
+      "backGroundScene": "watching_film_cats_page",
+      "buttons": [
+        {
+          "text": "Да, уже поздно...",
+          "idOfNextScene": 1
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        }]
+    },
+    {
+      "id": 11,
+      "text": "Мне нравится твой костюм.",
+      "backGroundScene": "halloween_page_scene_2",
+      "buttons": [
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": "Твой тоже очень красивый!",
+          "idOfNextScene": 12
+        },
+        {
+          "text": "А мне, если честно, не нравится твой...",
+          "idOfNextScene": 13
+        }]
+    },
+    {
+      "id": 12,
+      "text": "Спасибо! Ну, пойдем спать?",
+      "backGroundScene": "halloween_page_scene_2",
+      "buttons": [
+        {
+          "text": "Да, уже поздно...",
+          "idOfNextScene": 1
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Ничего, я не в обиде. Пойдем спать?",
+      "backGroundScene": "halloween_page_scene_2",
+      "buttons": [
+        {
+          "text": "Да, уже поздно...",
+          "idOfNextScene": 1
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Спасибо, что поиграли!",
+      "backGroundScene": "end_page",
+      "buttons": [
+        {
+          "text": "Пройти еще раз",
+          "idOfNextScene": 1
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        },
+        {
+          "text": null,
+          "idOfNextScene": null
+        }
+      ]
+    }
+  ]
+}
