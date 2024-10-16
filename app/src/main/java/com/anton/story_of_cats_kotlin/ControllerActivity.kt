@@ -8,24 +8,25 @@ import androidx.appcompat.app.AppCompatActivity
 import com.anton.story_of_cats_kotlin.databinding.ActivityTemplateFormBinding
 import models.Button
 import models.Page
+import org.koin.android.ext.android.inject
 
 
 class ControllerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTemplateFormBinding
+
+    private val novelRepository: NovelRepository by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTemplateFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        NovelRepository.initialize(this)
-
         val userChoice = intent.getIntExtra(UserConstants.CHOICE, 0)
         loadPage(userChoice)
     }
 
     private fun loadPage(userChoice: Int) {
-        val page = NovelRepository.fetchPage(userChoice)
+        val page = novelRepository.fetchPage(userChoice)
 
         if (page == null) {
             showError("Page is not found")
