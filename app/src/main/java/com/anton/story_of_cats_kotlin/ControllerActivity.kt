@@ -5,24 +5,21 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.anton.story_of_cats_kotlin.databinding.ActivityTemplateFormBinding
-import models.Page
 
 
-class ControllerActivity():
+class ControllerActivity:
     AppCompatActivity() {
-    private val novelRepository: NovelRepository = NovelRepositoryImpl(this)
+    private lateinit var novelRepository: NovelRepository
     private lateinit var binding: ActivityTemplateFormBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTemplateFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val userChoice = intent.getIntExtra(UserConstants.CHOICE,0)
+        novelRepository = NovelRepositoryImpl(this)
 
-        fun fetchPage(userChoice: Int): Page? {
-            return novelRepository.novel.pages.firstOrNull { page -> page.id == userChoice }
-        }
-        val page = fetchPage(userChoice)
+        val userChoice = intent.getIntExtra(UserConstants.CHOICE,0)
+        val page = novelRepository.fetchPage(userChoice)
 
         if (page == null) { return }
 

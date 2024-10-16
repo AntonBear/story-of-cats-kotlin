@@ -3,9 +3,11 @@ package com.anton.story_of_cats_kotlin
 import android.content.Context
 import kotlinx.serialization.json.Json
 import models.Novel
+import models.Page
 
 interface NovelRepository {
     val novel: Novel
+    fun fetchPage(userChoice: Int): Page?
 }
 
 class NovelRepositoryImpl(
@@ -19,6 +21,10 @@ class NovelRepositoryImpl(
 
         val novel = Json.decodeFromString<Novel>(jsonText)
         return@lazy novel
-
     }
+
+    override fun fetchPage(userChoice: Int): Page? {
+        return novel.pages.firstOrNull { page -> page.id == userChoice }
+    }
+
 }
